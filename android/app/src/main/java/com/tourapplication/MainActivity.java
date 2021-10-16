@@ -1,7 +1,7 @@
 package com.tourapplication;
 
 import com.facebook.react.ReactActivity;
-
+import com.dooboolab.RNAudioRecorderPlayerPackage;
 public class MainActivity extends ReactActivity {
 
   /**

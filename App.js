@@ -9,20 +9,22 @@ import {View,
 import Header from './components/Header';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import { tourItems } from './src/tourList';
+import AudioRecorderPlayer from 'react-native-audio-recorder-player';
 
 const App = () => {
 
-
   const [currentItem, setCurrentItem] = useState(0);
+  const audioRecorderPlayer = new AudioRecorderPlayer();
+
   const onStartPress = async (e) => {
-    //  try {
-    // const path = 'file://' + dirs + '/' + tourItem[currentItem].imgPath;
-    //  } catch (err) {
-    //    console.log(err);
-    //  }
+        const path = tourItems[currentItem].tour;
+        audioRecorderPlayer.startPlayer(path);
+        console.log('playing' + path);
+        audioRecorderPlayer.setVolume(1.0);
 
    };
-  const onBackward = async (e) => {
+  
+   const onBackward = async (e) => {
         // Subtract 1  tourItems.id
 
         let curr_item = tourItems[currentItem];
@@ -36,16 +38,16 @@ const App = () => {
     }; // End of onBackward
 
   const onForward = async (e) => {
-    // add 1  tourItems.id
+        // add 1  tourItems.id
 
-    let curr_item = tourItems[currentItem];
-    let curr_index = tourItems.indexOf(curr_item);
-  
-    if((curr_index + 1) == tourItems.length) {
-      setCurrentItem(0);
-    }  else {
-      setCurrentItem((curr_Item) => currentItem + 1);
-    } // End of if
+        let curr_item = tourItems[currentItem];
+        let curr_index = tourItems.indexOf(curr_item);
+
+        if((curr_index + 1) == tourItems.length) {
+          setCurrentItem(0);
+        }  else {
+          setCurrentItem((curr_Item) => currentItem + 1);
+        } // End of if
   } // End of onForward
 
 

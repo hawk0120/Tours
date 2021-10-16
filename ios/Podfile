@@ -14,6 +14,8 @@ target 'TourApplication' do
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
+  pod 'RNAudioRecorderPlayer', :path => '../node_modules/react-native-audio-recorder-player'
+
   target 'TourApplicationTests' do
     inherit! :complete
     # Pods for testing
