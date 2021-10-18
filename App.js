@@ -14,12 +14,13 @@ import AudioRecorderPlayer from 'react-native-audio-recorder-player';
 const App = () => {
 
   const [currentItem, setCurrentItem] = useState(0);
-  const audioRecorderPlayer = new AudioRecorderPlayer();
+  const [audioRecorderPlayer] = useState(new AudioRecorderPlayer());
 
   const onStartPress = async (e) => {
         const path = tourItems[currentItem].tour;
         audioRecorderPlayer.startPlayer(path);
-        console.log('playing' + path);
+        
+        console.log('playing: ' + path);
         audioRecorderPlayer.setVolume(1.0);
 
    };
