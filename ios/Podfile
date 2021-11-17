@@ -16,6 +16,9 @@ target 'TourApplication' do
 
   pod 'RNAudioRecorderPlayer', :path => '../node_modules/react-native-audio-recorder-player'
 
+
+  pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
+
   target 'TourApplicationTests' do
     inherit! :complete
     # Pods for testing

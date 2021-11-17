@@ -7,13 +7,20 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "generate": "npm react-native generate-bootsplash ./src/assets/original_icon.png --background-color=2EE59D   --logo-width=100 --assets-path=./src/assets --flavor=main"
+
   },
   "dependencies": {
     "@fortawesome/react-native-fontawesome": "^0.2.7",
+    "@react-navigation/native": "^6.0.6",
+    "@react-navigation/native-stack": "^6.2.5",
     "react": "17.0.2",
     "react-native": "0.66.0",
     "react-native-audio-recorder-player": "^3.2.0",
+    "react-native-maps": "0.29.3",
+    "react-native-safe-area-context": "^3.3.2",
+    "react-native-screens": "^3.8.0",
     "react-native-vector-icons": "^8.1.0"
   },
   "devDependencies": {
