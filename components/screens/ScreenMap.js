@@ -16,8 +16,8 @@ class ScreenMap extends Component {
 
    componentDidMount() {
 //    Fetch Tourlist
-    this.setState({ tours: tourItems });	
-   
+    this.setState({ tours: tourItems });
+
     
  }
   
