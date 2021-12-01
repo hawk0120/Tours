@@ -9,12 +9,14 @@ import {View,
   StyleSheet, 
   TouchableOpacity, 
   Image} from 'react-native';
+  
+import RNBootSplash from 'react-native-bootsplash';
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
- <NavigationContainer>
+ <NavigationContainer onReady={() => RNBootSplash.hide()}>
      <Stack.Navigator 
      initialRouteName='ScreenMap'
      animationEnabled='true'
